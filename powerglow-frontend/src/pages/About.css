@@ -1,0 +1,199 @@
+/* ==============================
+   Global Container
+================================ */
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 24px;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+}
+
+.aboutflex{
+    display: flex;
+    gap:5px;
+}
+img{
+    border:2px solid pink ;
+    border-radius:10px;
+    width: 500px;
+    height: 600px;
+}
+
+/* ==============================
+   Section Layout
+================================ */
+.about-section {
+  margin-bottom: 70px;
+}
+
+/* ==============================
+   Main Title
+================================ */
+.about-section h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+}
+
+/* ==============================
+   Section Titles
+================================ */
+.about-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ==============================
+   Step Titles
+================================ */
+.about-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+/* ==============================
+   Paragraph Text
+================================ */
+.about-section p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #374151;
+  margin-bottom: 18px;
+  max-width: 900px;
+}
+
+/* ==============================
+   Lists
+================================ */
+.about-section ul {
+  margin: 18px 0 28px 22px;
+  padding-left: 12px;
+}
+
+.about-section ul li {
+  font-size: 16.5px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #374151;
+  position: relative;
+}
+
+/* Custom bullet */
+.about-section ul li::marker {
+  color: #2563eb;
+  font-size: 1.1em;
+}
+
+/* ==============================
+   How It Works Grid
+================================ */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+  margin-top: 30px;
+}
+
+/* ==============================
+   Step Cards
+================================ */
+.step {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px 24px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Accent line */
+.step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+}
+
+/* Hover interaction */
+.step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.18);
+}
+
+/* ==============================
+   User Focus Enhancements
+================================ */
+.step p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+/* ==============================
+   Smooth Appearance Animation
+================================ */
+.about-section {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   Responsive Design
+================================ */
+@media (max-width: 900px) {
+  .about-section h1 {
+    font-size: 34px;
+  }
+
+  .about-section h2 {
+    font-size: 24px;
+  }
+
+  .about-section p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 40px 16px;
+  }
+
+  .about-section h1 {
+    font-size: 28px;
+  }
+
+  .about-section h2 {
+    font-size: 21px;
+  }
+
+  .about-section p,
+  .about-section ul li {
+    font-size: 15px;
+  }
+}
