@@ -157,5 +157,5 @@ git init
 git add .
 git commit -m "Initial commit: PowerGlow backend setup"
 git branch -M main
-git remote add origin https://github.com/rajendra0968jangid/powerglow-backend.git
+git remote add origin https://github.com/rajendra0968jangid/powerglow.git
 git push -u origin main
